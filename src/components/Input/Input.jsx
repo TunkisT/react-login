@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import * as S from './Input.style';
 
-function Input({ name, labelText, inputType, placeHolder }) {
+function Input({ name, labelText, type, placeholder }) {
+  const [value, setValue] = useState('');
+
+  const onChange = (event) => {
+    setValue(event.target.value);
+  };
   return (
     <>
-      <S.Label>{labelText}</S.Label>
-      <S.Input name={name} type={inputType} placeHolder='{placeHolder}' />
+      <S.Label htmlFor={name}>{labelText}</S.Label>
+      <S.Input
+        type={type}
+        id={name}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
     </>
   );
 }
@@ -14,8 +25,8 @@ function Input({ name, labelText, inputType, placeHolder }) {
 Input.propTypes = {
   name: PropTypes.string.isRequired,
   labelText: PropTypes.node.isRequired,
-  inputType: PropTypes.node.isRequired,
-  placeHolder: PropTypes.node.isRequired,
+  type: PropTypes.node.isRequired,
+  placeholder: PropTypes.node.isRequired,
 };
 
 export default Input;

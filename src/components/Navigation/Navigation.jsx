@@ -11,7 +11,9 @@ function Navigation({ data }) {
       />
       <S.LinkDiv>
         {data.map((obj) => (
-          <S.Link href={obj.link}>{obj.title}</S.Link>
+          <S.StyledLink key={obj.title} to={obj.link}>
+            {obj.title}
+          </S.StyledLink>
         ))}
       </S.LinkDiv>
     </S.Navigation>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Navigation = styled.nav`
   align-items: center;
@@ -16,7 +17,7 @@ export const LinkDiv = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-export const Link = styled.a`
+export const StyledLink = styled(Link)`
   color: grey;
   padding: 1rem;
   text-decoration: none;

@@ -6,11 +6,14 @@ export default {
   component: Input,
 };
 
-export const primary = () => (
+export const password = () => (
   <Input
-    name='email'
-    labelText='Email'
-    inputType='password'
+    name='password'
+    labelText='password'
+    type='password'
     placeholder='Password'
   />
+);
+export const email = () => (
+  <Input name='email' labelText='Email' type='email' placeholder='email' />
 );
