@@ -18,5 +18,5 @@ export default {
 };
 
 export const Default = () => {
-  return <Navigation data={data}>navi test</Navigation>;
+  return <Navigation data={data}/>;
 };

@@ -18,6 +18,8 @@ function Navigation({ data }) {
   );
 }
 
-Navigation.propTypes = {};
+Navigation.propTypes = {
+  data: PropTypes.array.isRequired,
+};
 
 export default Navigation;
