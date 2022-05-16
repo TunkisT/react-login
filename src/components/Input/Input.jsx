@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import * as S from './Input.style';
 
-function Input({ name, labelText, type, placeholder }) {
+function Input({ name, labelText, type, placeholder, handleChange }) {
   const [value, setValue] = useState('');
 
   const onChange = (event) => {
     setValue(event.target.value);
+    handleChange(event.target.value);
   };
   return (
     <>
